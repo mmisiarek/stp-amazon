@@ -8,7 +8,9 @@
     "test:xunit": "npm run test -- --reporter xunit",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "lint": "jshint --exclude=node_modules/** **.js"
+    "lint": "jshint --exclude=node_modules/** **.js",
+    "infrastructure:test": "node infrastructure/test.js",
+    "infrastructure:prod": "node infrastructure/prod.js"
   },
   "author": "Michal Misiarek",
   "license": "ISC",
