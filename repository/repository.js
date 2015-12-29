@@ -1,6 +1,6 @@
 'use strict';
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/stp-amazon';
+const url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/stp-amazon';
 
 const connection =  MongoClient.connect(url);
 const books = connection.then(db => db.collection('books'));
