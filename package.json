@@ -1,0 +1,27 @@
+{
+  "name": "amazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "test:xunit": "npm run test -- --reporter xunit",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "lint": "jshint --exclude=node_modules/** **.js"
+  },
+  "author": "Michal Misiarek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "jshint": "^2.8.0",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "nodemon": "^1.8.1",
+    "supertest": "^1.1.0"
+  }
+}
