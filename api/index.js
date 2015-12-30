@@ -26,5 +26,13 @@ module.exports = function(repo){
       .then(res.send.bind(res));
   });
 
+  router.get('/:id/count', (req, res) => {
+    let isbn = req.params.id;
+    repo.getBookByIsbn(isbn)
+      .then((body) => {
+         res.send(`<div>Count: ${body.count}</div>`);
+      });
+  });
+
   return router;
 };

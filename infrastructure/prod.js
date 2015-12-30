@@ -5,7 +5,8 @@ var test = {
    name: 'stp-amazon',
    config_vars: {
      NODE_ENV: 'production'
-   }
+   },
+   log_drains: ['syslog://data.logentries.com:13636']
 };
 
 var config = _.merge({}, require('./base'), test);
